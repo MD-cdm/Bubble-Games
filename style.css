@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Stylish Google Font */
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #8dada2, #56ab2f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 90vw;
+    backdrop-filter: blur(10px);
+}
+
+#panel {
+    overflow: hidden;
+    height: 80%;
+    width: 80%;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#ptop {
+    justify-content: space-between;
+    padding: 0 10%;
+    align-items: center;
+    display: flex;
+    color: #fff;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(135deg, #314b2c, #09701d);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.elem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.elem h2 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.box {
+    color: rgb(3, 64, 16);
+    font-weight: 700;
+    font-size: 28px;
+    padding: 12px 22px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+#pbtm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    width: 100%;
+    height: calc(100% - 100px);
+}
+
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #4e9f3d, #1e5128);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.bubble:hover {
+    cursor: pointer;
+    background: linear-gradient(135deg, #1e5128, #4e9f3d);
+    transform: scale(1.1);
+}
