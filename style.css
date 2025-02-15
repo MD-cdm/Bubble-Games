@@ -1,8 +1,9 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif; /* Stylish Google Font */
+    font-family: "Poppins", sans-serif;
 }
 
 html, body {
@@ -14,6 +15,7 @@ html, body {
     justify-content: center;
 }
 
+/* Main Container */
 #main {
     display: flex;
     align-items: center;
@@ -23,6 +25,14 @@ html, body {
     backdrop-filter: blur(10px);
 }
 
+.bub {
+    text-align: center;
+    color: #f7fff9;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Game Panel */
 #panel {
     overflow: hidden;
     height: 80%;
@@ -34,45 +44,53 @@ html, body {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Top Panel - Row Format */
 #ptop {
-    justify-content: space-between;
-    padding: 0 10%;
-    align-items: center;
     display: flex;
-    color: #fff;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
     width: 100%;
-    height: 100px;
+    height: 80px;
     background: linear-gradient(135deg, #314b2c, #09701d);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Hit - Timer - Score (Row Items) */
 .elem {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 8px;
+    flex-direction: row;
 }
 
+/* Labels (Hit, Timer, Score) */
 .elem h2 {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
+    color: white;
 }
 
+/* Number Box */
 .box {
     color: rgb(3, 64, 16);
     font-weight: 700;
-    font-size: 28px;
-    padding: 12px 22px;
+    font-size: 22px;
+    padding: 8px 15px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
+/* Hover Effect */
 .box:hover {
     background: rgba(255, 255, 255, 0.4);
     transform: scale(1.05);
 }
 
+/* Bottom Panel - Bubbles */
 #pbtm {
     display: flex;
     align-items: center;
@@ -81,9 +99,10 @@ html, body {
     gap: 15px;
     padding: 20px;
     width: 100%;
-    height: calc(100% - 100px);
+    height: calc(100% - 80px);
 }
 
+/* Bubble Design */
 .bubble {
     display: flex;
     align-items: center;
@@ -99,8 +118,84 @@ html, body {
     transition: all 0.3s ease;
 }
 
+/* Hover Effect on Bubbles */
 .bubble:hover {
     cursor: pointer;
     background: linear-gradient(135deg, #1e5128, #4e9f3d);
     transform: scale(1.1);
+}
+
+/* 🔹 Responsive Design */
+
+/* Tablet & Smaller Devices */
+@media (max-width: 768px) {
+    #panel {
+        width: 95%;
+        height: 85%;
+    }
+
+    #ptop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+    }
+
+    .elem {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .elem h2 {
+        font-size: 18px;
+    }
+
+    .box {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+
+    #pbtm {
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .bubble {
+        width: 55px;
+        height: 55px;
+        font-size: 18px;
+    }
+}
+
+/* Extra Small Screens (Phones) */
+@media (max-width: 480px) {
+    #panel {
+        width: 100%;
+        height: 90%;
+    }
+
+    #ptop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+    }
+
+    .elem {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .box {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+
+    .bubble {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
 }
